@@ -1,52 +1,43 @@
-<!DOCTYPE html>
-<html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <title>Η Πρώτη μου Δοκιμή</title>
-    <style>
-        /* Εδώ βάζουμε τα χρώματα (CSS) */
-        body {
-            background-color: #f5f2d0; /* Το άτονο κίτρινο που σου αρέσει */
-            font-family: Arial, sans-serif;
+<nav class="kentriko-menou">
+    <ul>
+        <li><a href="#">Το Κλήμα & Η Γη</a></li>
+        <li><a href="#">Ιστορία</a></li>
+        <li><a href="#">Η Επεξεργασία</a></li>
+        <li><a href="#">Προϊόντα</a></li>
+        <li><a href="#">Δελέρια Τυρνάβου</a></li>
+    </ul>
+</nav>
+<br><br> ```
+
+**Βήμα 2: Η ομορφιά (CSS)**
+Για να μην φαίνονται σαν μια απλή λίστα με τελείες, αλλά σαν μια ωραία, οριζόντια πράσινη μπάρα (που όταν περνάς το ποντίκι από πάνω θα γίνεται κίτρινη), πήγαινε πάνω στο `<style>` και, ακριβώς **πριν** το `</style>`, κάνε επικόλληση αυτό:
+
+```css
+        /* Χρώματα και διάταξη για το Κεντρικό Μενού */
+        .kentriko-menou ul {
+            list-style-type: none; /* Βγάζει τις τελείες */
+            margin: 0;
+            padding: 0;
+            background-color: #436129; /* Το πράσινο χρώμα του αμπελιού */
             text-align: center;
-            padding-top: 50px;
+            border-radius: 8px; /* Στρογγυλές γωνίες */
         }
 
-        .to-kouti-mou {
-            background-color: #436129; /* Το πράσινο που διάλεξες */
-            color: white;              /* Άσπρα γράμματα για να διαβάζονται */
-            width: 400px;              /* Πόσο πλατύ θα είναι το κουτί */
-            padding: 30px;             /* Πόσο «αέρα» θα έχει μέσα */
-            border-radius: 15px;       /* Στρογγυλεμένες γωνίες */
-            margin: 0 auto;            /* Αυτό το βάζει ακριβώς στη μέση της οθόνης */
+        .kentriko-menou li {
+            display: inline-block; /* Τα βάζει οριζόντια, το ένα δίπλα στο άλλο */
         }
 
-        h1 {
-            margin-top: 0;
-        }
-
-        .koumpi {
-            background-color: #e6d194; /* Κίτρινο κουμπί */
-            color: #436129;            /* Πράσινα γράμματα στο κουμπί */
-            padding: 10px 20px;
-            text-decoration: none;     /* Βγάζει την υπογράμμιση από το link */
+        .kentriko-menou li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 25px;
+            text-decoration: none; /* Βγάζει την υπογράμμιση */
             font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
         }
-    </style>
-</head>
-<body>
 
-    <div class="to-kouti-mou">
-        <h1>Καλώς ήρθατε!</h1>
-        <p>Αυτό είναι το πρώτο μου κουτί. Μαθαίνω πώς να βάζω χρώματα και να οργανώνω τον κώδικα.</p>
-        <a href="#" class="koumpi">Πάτα με</a>
-        <img src="stafyli.jpg" style="width: 100%; border-radius: 10px; margin-top: 15px;">
-    </div>
-
-</body>
-</html>
-
-
+        .kentriko-menou li a:hover {
+            background-color: #e6d194; /* Γίνεται κίτρινο όταν περνάει το ποντίκι */
+            color: #436129;
+            border-radius: 8px;
+        }
