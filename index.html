@@ -2,91 +2,90 @@
 <html lang="el">
 <head>
     <meta charset="UTF-8">
-    <title>Η Πρώτη μου Δοκιμή</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-stafyli | Δελέρια Τυρνάβου</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        sonata: '#847a63', // Το γήινο χρώμα σου
+                        wine: '#800020',   // Το βυσσινί των γραμμάτων
+                        cream: '#f5f2d0'   // Το φόντο της σελίδας
+                    },
+                    fontFamily: { sans: ['"Noto Sans Greek"', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
     <style>
-        /* --- Εδώ βάζουμε τα χρώματα (CSS) --- */
-        body {
-            background-color: #8e948b;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 30px;
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(132,122,99,0.6) 50%, rgba(132,122,99,1) 100%), url('stafyli.jpg');
+            background-size: cover;
+            background-position: center;
         }
-
-        /* Τα χρώματα του πράσινου κουτιού */
-        .to-kouti-mou {
-            background-color: #ede3c7;
-            color: #800020;
-            width: 400px;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 0 auto;
-        }
-
-        h1 { margin-top: 0; }
-
-        /* Τα χρώματα του κουμπιού */
-        .koumpi {
-            background-color: #8e948b;
-            color: #800020;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        /* --- Χρώματα και διάταξη για το Κεντρικό Μενού --- */
-        .kentriko-menou ul {
-            list-style-type: none; 
-            margin: 0 auto 30px auto; /* Το 30px αφήνει κενό κάτω από το μενού */
-            padding: 0;
-            background-color: ##8e948b; 
-            text-align: center;
-            border-radius: 8px; 
-            width: 800px; /* Πόσο πλατύ θα είναι το μενού */
-        }
-
-        .kentriko-menou li {
-            display: inline-block; 
-        }
-
-        .kentriko-menou li a {
-            display: block;
-            color: #800020;
-            text-align: center;
-            padding: 15px 20px;
-            text-decoration: none; 
-            font-weight: bold;
-        }
-
-        .kentriko-menou li a:hover {
-            background-color: #ede3c7; 
-            color: #8e948b;
-            border-radius: 8px;
-        }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body>
+<body class="bg-cream text-zinc-900 antialiased font-sans">
 
-    <nav class="kentriko-menou">
-        <ul>
-            <li><a href="#">Το Κλήμα & Η Γη</a></li>
-            <li><a href="#">Ιστορία</a></li>
-            <li><a href="#">Η Επεξεργασία</a></li>
-            <li><a href="#">Προϊόντα</a></li>
-            <li><a href="#">Δελέρια Τυρνάβου</a></li>
-        </ul>
+    <nav class="fixed top-0 w-full z-50 bg-sonata/95 backdrop-blur-md border-b border-wine/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <span class="text-cream font-black text-xl tracking-tighter uppercase">e-stafyli</span>
+                </div>
+                <div class="hidden md:flex items-center gap-6 text-[10px] font-bold text-cream uppercase tracking-widest">
+                    <a href="#history" class="hover:text-wine transition">Ιστορια</a>
+                    <a href="#process" class="hover:text-wine transition">Παραγωγη</a>
+                    <a href="#products" class="hover:text-wine transition">Προϊοντα</a>
+                    <a href="#delery" class="hover:text-wine transition">Δελερια</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <div class="to-kouti-mou">
-        <h1>Καλώς ήρθατε!</h1>
-        <p>Αυτό είναι το πρώτο μου κουτί. Μαθαίνω πώς να βάζω χρώματα και να οργανώνω τον κώδικα.</p>
-        
-        <img src="stafyli.jpg" style="width: 100%; border-radius: 10px; margin-top: 15px;">
-        
-        <a href="#" class="koumpi">Πάτα με</a>
-    </div>
+    <section class="relative min-h-screen flex items-center justify-center text-center hero-bg">
+        <div class="relative z-10 px-6">
+            <span class="inline-block text-cream font-bold tracking-[0.4em] text-xs uppercase mb-4">Απο τη γη του Τυρναβου</span>
+            <h1 class="font-black leading-none tracking-tighter text-white">
+                <span class="block text-7xl md:text-9xl">ΔΕΛΕΡΙΑ</span>
+                <span class="block text-wine text-5xl md:text-7xl -mt-2">ΤΥΡΝΑΒΟΥ</span>
+            </h1>
+            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto">Η ιστορία μιας ολόκληρης ζωής κλεισμένη σε μια ρώγα σταφύλι.</p>
+        </div>
+    </section>
 
+    <section id="history" class="py-24 bg-white fade-in px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-sonata font-black tracking-widest text-xs uppercase">01. Η Ιστορια μας</span>
+                <h2 class="mt-4 text-4xl font-black text-wine uppercase">Οικογένειες <br>δεμένες με τη γη.</h2>
+                <p class="mt-6 text-zinc-600 leading-relaxed text-lg">Στα Δελέρια, το αμπέλι δεν είναι απλώς καλλιέργεια. Είναι ο τρόπος που μεγαλώσαμε. Κάθε κλήμα έχει πίσω του τον ιδρώτα και την αγάπη των παππούδων μας.</p>
+            </div>
+            <div class="bg-cream p-8 rounded-3xl border border-sonata/20 shadow-xl">
+                <h3 class="font-black text-sonata uppercase mb-4">Η Κληρονομια</h3>
+                <p class="text-sm text-zinc-500">Από τον τρύγο του παρελθόντος στις σύγχρονες μεθόδους, κρατάμε ζωντανή την ποιότητα που έκανε τον Τύρναβο ξακουστό στα πέρατα του κόσμου.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-sonata py-12 text-center">
+        <p class="text-cream/60 text-[10px] uppercase tracking-[0.4em]">© 2026 e-stafyli • Δελέρια Τυρνάβου • Παράδοση & Ποιότητα</p>
+    </footer>
+
+    <script>
+        // Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
